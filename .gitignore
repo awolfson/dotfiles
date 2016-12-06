@@ -1,0 +1,11 @@
+*
+
+!.bash_profile
+!.gemrc
+!.git-completion.bash
+!.gitconfig
+!.gitignore
+!.gitignore_global
+!.inputrc
+!.tmux.conf
+!.vimrc
