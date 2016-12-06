@@ -1,0 +1,14 @@
+[alias]
+	st = status
+	d = diff
+	dc = diff
+	co = checkout
+	dc = diff
+	dc = diff --cached
+	br = branch
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[user]
+	name = Aaron Wolfson
+	email = awolfson0@gmail.com
+[core]
+	excludesfile = /Users/aaron/.gitignore_global
