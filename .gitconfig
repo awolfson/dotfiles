@@ -1,14 +1,26 @@
 [alias]
 	st = status
-	d = diff
-	dc = diff
 	co = checkout
-	dc = diff
+	d  = diff
 	dc = diff --cached
 	br = branch
+	ci = commit
+	unstage = reset HEAD --
+	last = log -1 HEAD
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [user]
 	name = Aaron Wolfson
 	email = awolfson0@gmail.com
 [core]
-	excludesfile = /Users/aaron/.gitignore_global
+	autocrlf = false
+	excludesfile = ~/.gitignore_global
+[push]
+	default = matching
+[credential]
+	helper = osxkeychain
+[pager]
+	diff = diff-highlight | less
+	show = diff-highlight | less
+	log  = diff-highlight | less
+[interactive]
+	diffFilter = diff-highlight
