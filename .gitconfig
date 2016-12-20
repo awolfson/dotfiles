@@ -1,26 +1,39 @@
 [alias]
-	st = status
-	co = checkout
-	d  = diff
-	dc = diff --cached
-	br = branch
-	ci = commit
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  st = status
+  co = checkout
+  d  = diff
+  dc = diff --cached
+  br = branch
+  ci = commit
+  c = commit -am
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [user]
-	name = Aaron Wolfson
-	email = awolfson0@gmail.com
+  name = Aaron Wolfson
+  email = awolfson0@gmail.com
 [core]
-	autocrlf = false
-	excludesfile = ~/.gitignore_global
+  autocrlf = false
+  excludesfile = ~/.gitignore_global
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
-	default = matching
-[credential]
-	helper = osxkeychain
+  default = matching
 [pager]
-	diff = diff-highlight | less
-	show = diff-highlight | less
-	log  = diff-highlight | less
+  diff = diff-so-fancy | less --tabs=4 -RFX --pattern '^(Date|added|deleted|modified): '
+[credential]
+  helper = osxkeychain
 [interactive]
-	diffFilter = diff-highlight
+  diffFilter = diff-highlight
+[color]
+  ui = always
+[color "diff"]
+  meta = yellow bold
+  commit = green bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22

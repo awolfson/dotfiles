@@ -68,3 +68,5 @@ function upstr()
 {
     echo "$(up "$1" && pwd)";
 }
+
+export PATH="$HOME/.bin:$PATH"
