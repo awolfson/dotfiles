@@ -23,7 +23,7 @@ export PATH="$PATH:~/scripts:/usr/local/mysql/bin:~/bin"
 alias reload!='source ~/.bash_profile'
 
 # Script shortcuts
-alias newscript="chmod u+rx ~/scripts/*.sh"
+alias newscript="chmod u+rx ~/scripts/*.sh && reload!"
 
 # Rails shortcuts
 alias be="bundle exec"
