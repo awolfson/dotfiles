@@ -17,7 +17,7 @@ test -f ~/.git-completion.bash && . $_
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Additional PATHs
-export PATH="$PATH:~/scripts:/usr/local/mysql/bin:~/bin"
+export PATH="$PATH:~/scripts:/usr/local/mysql/bin:~/bin:.bin"
 
 # Bash aliases
 alias reload!='source ~/.bash_profile'
@@ -30,7 +30,9 @@ alias be="bundle exec"
 alias dlog="tail -f log/development.log"
 alias rs="bin/rails s"
 alias rsp="bin/rspec"
+alias rc="bin/rails c"
 alias rcs="bin/rails c --sandbox"
+alias rt="rails_test"
 
 # Vagrant shortcuts
 alias vu="vagrant up"
@@ -69,4 +71,17 @@ function upstr()
     echo "$(up "$1" && pwd)";
 }
 
-export PATH="$HOME/.bin:$PATH"
+function rails_test()
+{
+  type="model"
+  if [ -z "$1" ]; then
+    echo "Usage: rails_test model-name [test-name-regex]"
+  else
+    testfile="test/models/"$1"_test.rb"
+    if [ -z "$2" ]; then
+      ruby -Itest "$testfile"
+    else
+      ruby -Itest "$testfile" -n "/"$2"/"
+    fi
+  fi
+}
