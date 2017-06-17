@@ -18,6 +18,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Additional PATHs
 export PATH="$PATH:~/scripts:/usr/local/mysql/bin:~/bin:.bin"
+export PATH="$PATH:`yarn global bin`"
+
+#export EDITOR="subl -w"
 
 # Bash aliases
 alias reload!='source ~/.bash_profile'
@@ -29,10 +32,12 @@ alias newscript="chmod u+rx ~/scripts/*.sh && reload!"
 alias be="bundle exec"
 alias dlog="tail -f log/development.log"
 alias rs="bin/rails s"
+alias fs="bin/foreman start"
 alias rsp="bin/rspec"
 alias rc="bin/rails c"
 alias rcs="bin/rails c --sandbox"
 alias rt="rails_test"
+alias rr="bin/rails routes"
 
 # Vagrant shortcuts
 alias vu="vagrant up"
@@ -85,3 +90,5 @@ function rails_test()
     fi
   fi
 }
+
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
