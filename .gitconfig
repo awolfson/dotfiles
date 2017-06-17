@@ -9,13 +9,13 @@
   unstage = reset HEAD --
   last = log -1 HEAD
   lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	fu = fetch upstream
-	leaderboard = shortlog -sn
+  fu = fetch upstream
+  leaderboard = shortlog -sn
 [user]
-	name = Aaron Wolfson
-	email = awolfson0@gmail.com
+  name = Aaron Wolfson
+  email = awolfson0@gmail.com
 [core]
-	autocrlf = input
+  autocrlf = input
   excludesfile = ~/.gitignore_global
   pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
