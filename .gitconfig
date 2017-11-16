@@ -11,6 +11,7 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)%an%C(reset) - %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   fu = fetch upstream
   leaderboard = shortlog -sn
+  forget = "!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
 [user]
   name = Aaron Wolfson
   email = awolfson0@gmail.com
@@ -39,3 +40,10 @@
   oldHighlight = red bold 52
   newNormal = green bold
   newHighlight = green bold 22
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[fetch]
+	prune = true
