@@ -22,7 +22,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Additional PATHs
 export PATH="$PATH:~/scripts:/usr/local/mysql/bin:~/bin:.bin"
 export PATH="$PATH:`yarn global bin`"
-
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.6/bin"
 #export EDITOR="subl -w"
 
 # Bash aliases
@@ -95,3 +95,6 @@ function rails_test()
 }
 
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
