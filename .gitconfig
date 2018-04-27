@@ -47,3 +47,5 @@
 	clean = git-lfs clean -- %f
 [fetch]
 	prune = true
+[rebase]
+	autosquash = true
