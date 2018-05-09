@@ -1,0 +1,6 @@
+--database=postgresql
+
+--skip-test-unit
+--skip-action-cable
+
+--template=~/rails/rails_template.rb

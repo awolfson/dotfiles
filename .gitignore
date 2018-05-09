@@ -7,5 +7,6 @@
 !.gitignore
 !.gitignore_global
 !.inputrc
+!.railsrc
 !.tmux.conf
 !.vimrc
